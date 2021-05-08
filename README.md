@@ -1,29 +1,3 @@
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-
-  <h3 align="center">Rating Widget</h3>
-
-  <p align="center">
-    A web-based realtime chat with authentication.
-    <br />
-    <a href="https://github.com/arshiahsn/rating-widget"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/arshiahsn/arshiahsn.github.io/blob/master/rating-widget.gif">View Demo</a>
-    ·
-    <a href="https://github.com/arshiahsn/rating-widget/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/arshiahsn/rating-widget/issues">Request Feature</a>
-  </p>
-</p>
-
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
