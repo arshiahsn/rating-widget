@@ -57,9 +57,9 @@
 
 Q3: To address the rating widget.
 The user is assumed to be an authenticated user as per the instructions.
-The server is assumed to be running on localhost:8000
-The API for ratings is assumed to be at /api/rating
-Each product has a UUID which is send along with the user object and the rating to ther server.
+The server is assumed to be running on "localhost:8000".
+The API for ratings is assumed to be at "/api/rating".
+Each product has a UUID which is sent along with the user object and the rating to ther server.
 
 
 ### Built With
