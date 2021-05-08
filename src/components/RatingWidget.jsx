@@ -15,26 +15,7 @@ const useStyles = makeStyles({
         alignItems: 'flex-start',
         alignContent: 'flex-start'
 
-    },ratingStars: {
-        position: 'relative',
-        display: 'block',
-        textAlign: 'center',
-      },
-      
-      ratingStars: {
-        display: 'inlineBlock',
-        padding: 0 ,
-        fontSize: 2.5,
-        color: '#cccccc'
-
-      },
-      hover: {
-        color: '#ffd73e'
-      },
-      
-      active: {
-        color: '#FF9800'
-      }
+    }
   });
 
 export default function RatingWidget(props){
@@ -42,6 +23,7 @@ export default function RatingWidget(props){
     const[hoveredStar, setHoveredStar] = useState(0);
     const[clickedStar, setClickedStar] = useState(0);
     
+    {/* Handle api call in effect hook */}
     useEffect(()=>{
         if(clickedStar)
             handleSubmitRating();
@@ -59,10 +41,9 @@ export default function RatingWidget(props){
     const handleMouseClick = (number) => {
         if(!clickedStar)
             setClickedStar(number);
-            
-            
+       
     }
-
+    {/* Submit rating as a JSON to the server at /api/ratings */}
     const handleSubmitRating = () => {
         const requestBody = {
             user: 'AuthenticatedUser',
@@ -85,12 +66,12 @@ export default function RatingWidget(props){
     return(
         <Box className={classes.widget}>
             {[1, 2, 3, 4, 5].map((element, number) =>
-                <span                 
+                <span
+                key={number.toString()}                 
                 onMouseOver={() => handleMouseEnter(element)}
                 onMouseOut={() => handleMouseLeave()}
                 onClick={() => handleMouseClick(element)}>
                     <RenderStar
-                    key={number.toString()} 
                     number={element} 
                     hoveredStar={hoveredStar}
                     clickedStar={clickedStar}/>
