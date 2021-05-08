@@ -26,13 +26,14 @@ export default function Star(props){
     let currentClass = classes.empty;
     if (props.index <= props.selected)
         currentClass = classes.active;
-    else
+    else{
         if (props.index <= props.hovered)
-        currentClass = classes.hover;
+            currentClass = classes.hover;
+    }
+        
     return(
         <div className={currentClass} >
-            <span><FontAwesomeIcon icon={faStar} className={currentClass} onClick={props.onClick} onMouseEnter={props.onMouseEnter}
-        onMouseLeave={props.onMouseLeave}/></span>
+            <span><FontAwesomeIcon icon={faStar} className={currentClass} onClick={props.onClick} /></span>
         </div>
     );
 }

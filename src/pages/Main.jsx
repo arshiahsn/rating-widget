@@ -16,6 +16,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import Radio from '@material-ui/core/Radio';
 import Paper from '@material-ui/core/Paper';
 import ProductCard from '../components/ProductCard'
+import { v4 as uuidv4 } from 'uuid';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,7 +45,7 @@ export default function SpacingGrid() {
         <Grid container justify="center" spacing={spacing}>
           {[0, 1, 2, 3, 4, 5, 6, 7].map((value) => (
             <Grid key={value} item>
-              <ProductCard className={classes.card} />
+              <ProductCard id={value} uuid={uuidv4()} className={classes.card} />
             </Grid>
           ))}
         </Grid>

@@ -31,15 +31,16 @@ export default function ProductCard(props) {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Product
+            Product {props.id}
           </Typography>
+          <p>{props.uuid}</p>
           <Typography variant="body2" color="textSecondary" component="p">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor justo, volutpat et mauris id, pulvinar hendrerit urna. Vivamus id tristique est. Praesent suscipit tristique lorem, vitae mattis massa consequat vel. Morbi sit amet euismod nibh.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <RatingWidget/>
+        <RatingWidget uuid={props.uuid}/>
       </CardActions>
     </Card>
   );
