@@ -1,5 +1,3 @@
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 Q3: To address the rating widget.
